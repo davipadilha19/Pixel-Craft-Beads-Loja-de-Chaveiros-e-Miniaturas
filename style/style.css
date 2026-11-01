@@ -1,0 +1,552 @@
+/* ==========================================
+   1. CONFIGURAÇÕES GLOBAIS E VARIÁVEIS
+   ========================================== */
+:root {
+    --primary: #ff3366;       
+    --primary-dark: #d92250;
+    --secondary: #6366f1;     
+    --dark: #1e1b2e;          
+    --light: #f8fafc;         
+    --gray: #64748b;          
+    --white: #ffffff;
+    --card-bg: #ffffff;
+    --form-bg: #f8fafc;
+    --transition: all 0.3s ease;
+}
+
+/* Tema Escuro */
+body.dark-theme {
+    --primary: #ff4d79;
+    --primary-dark: #ff1a53;
+    --secondary: #818cf8;
+    --dark: #f8fafc;          
+    --light: #0f172a;         
+    --gray: #94a3b8;          
+    --white: #1e293b;         
+    --card-bg: #1e293b;
+    --form-bg: #1e293b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================
+   2. HEADER E NAVEGAÇÃO
+   ========================================== */
+header {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo a {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--dark);
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+nav ul li a:hover {
+    color: var(--primary);
+}
+
+.btn-tema {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.btn-header {
+    background-color: var(--primary);
+    color: var(--white) !important;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: var(--transition);
+}
+
+.btn-header:hover {
+    background-color: var(--primary-dark);
+}
+
+/* ==========================================
+   3. ESTILOS GERAIS DE SEÇÕES
+   ========================================== */
+section {
+    padding: 80px 0;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: var(--dark);
+}
+
+.subtitulo {
+    text-align: center;
+    color: var(--gray);
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+.btn-principal, .btn-produto {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.btn-principal:hover, .btn-produto:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 51, 102, 0.3);
+}
+
+/* ==========================================
+   4. SEÇÃO CATÁLOGO
+   ========================================== */
+.catalogo-secao {
+    background-color: var(--light);
+}
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.produto-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.produto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.produto-imagem {
+    height: 200px;
+    background-color: #cbd5e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.produto-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.produto-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.tag-categoria {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--secondary);
+    margin-bottom: 5px;
+}
+
+.produto-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: var(--dark);
+}
+
+.descricao {
+    font-size: 0.95rem;
+    color: var(--gray);
+    margin-bottom: 12px;
+    flex-grow: 1;
+}
+
+.dimensoes {
+    font-size: 0.85rem;
+    color: var(--gray);
+    margin-bottom: 15px;
+}
+
+.preco {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+/* ==========================================
+   5. SEÇÃO ENCOMENDAS
+   ========================================== */
+.encomendas-secao {
+    background-color: var(--light);
+}
+
+.form-encomenda {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--form-bg);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.form-grupo {
+    margin-bottom: 20px;
+}
+
+.form-grupo label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.form-grupo input,
+.form-grupo select,
+.form-grupo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--gray);
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: var(--white);
+    color: var(--dark);
+    transition: var(--transition);
+}
+
+.form-encomenda .btn-principal {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* ==========================================
+   6. SEÇÃO AVALIAÇÕES
+   ========================================== */
+.avaliacoes-secao {
+    background-color: var(--light);
+}
+
+.avaliacoes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.avaliacao-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.estrelas {
+    color: #f59e0b;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.depoimento-texto {
+    font-style: italic;
+    color: var(--gray);
+    margin-bottom: 20px;
+}
+
+.cliente-nome {
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: var(--dark);
+}
+
+/* ==========================================
+   7. SEÇÃO SOBRE
+   ========================================== */
+.sobre-secao {
+    background-color: var(--light);
+}
+
+.sobre-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.sobre-texto h2 {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.sobre-texto .subtitulo {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.sobre-texto p {
+    color: var(--gray);
+    margin-bottom: 20px;
+}
+
+.diferenciais-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+.sobre-imagem img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    height: 350px;
+}
+
+/* ==========================================
+   8. SEÇÃO FAQ
+   ========================================== */
+.faq-secao {
+    background-color: var(--light);
+}
+
+.faq-grid {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.faq-item summary {
+    font-weight: 600;
+    font-size: 1.05rem;
+    outline: none;
+    color: var(--dark);
+}
+
+.faq-item p {
+    margin-top: 15px;
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   9. RODAPÉ (FOOTER)
+   ========================================== */
+.rodape-site {
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 60px 0 20px 0;
+}
+
+.rodape-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.rodape-coluna h3, .rodape-coluna h4 {
+    margin-bottom: 15px;
+    color: var(--white);
+}
+
+.rodape-coluna p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+.rodape-coluna ul {
+    list-style: none;
+}
+
+.rodape-coluna ul li {
+    margin-bottom: 8px;
+}
+
+.rodape-coluna ul li a, .redes-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.rodape-coluna ul li a:hover, .redes-links a:hover {
+    color: var(--primary);
+}
+
+.redes-links {
+    display: flex;
+    gap: 15px;
+}
+
+.rodape-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    color: #94a3b8;
+    font-size: 0.85rem;
+}
+
+/* ==========================================
+   10. RESPONSIVIDADE (TABLETS E CELULARES)
+   ========================================== */
+
+/* Tablet (Telas até 1024px) */
+@media (max-width: 1024px) {
+    .produtos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .avaliacoes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Celulares e Tablets Pequenos (Telas até 768px) */
+@media (max-width: 768px) {
+    section {
+        padding: 50px 0;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Header e Navegação */
+    header .container {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    /* Grids empilhados em coluna única */
+    .produtos-grid,
+    .avaliacoes-grid,
+    .rodape-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Seção Sobre em Coluna */
+    .sobre-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .sobre-texto h2, 
+    .sobre-texto .subtitulo {
+        text-align: center;
+    }
+
+    .sobre-imagem img {
+        height: 250px;
+    }
+
+    /* Formulário ajustado para telas pequenas */
+    .form-encomenda {
+        padding: 25px 20px;
+    }
+}
+
+/* Celulares Pequenos (Telas até 480px) */
+@media (max-width: 480px) {
+    .btn-principal, .btn-produto {
+        width: 100%;
+    }
+
+    .produto-imagem {
+        height: 180px;
+    }
+}

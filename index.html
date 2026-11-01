@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <title>Pixeland | Loja de Chaveiros e Miniaturas</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+
+    <!-- ==========================================
+       HEADER E NAVEGAÇÃO
+       ========================================== -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#">Pixeland</a>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="#catalogo">Catálogo</a></li>
+                    <li><a href="#encomendas">Encomendas</a></li>
+                    <li><a href="#avaliacoes">Avaliações</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <!-- Botão de Alternar Tema -->
+                    <li><button id="btn-tema" class="btn-tema" aria-label="Alternar tema escuro">🌙</button></li>
+                    <li><a href="https://wa.me/5547996214834" class="btn-header" target="_blank">WhatsApp</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==========================================
+       CONTEÚDO PRINCIPAL (<main>)
+       ========================================== -->
+    <main>
+
+        <!-- 1. SEÇÃO CATÁLOGO -->
+        <section id="catalogo" class="catalogo-secao">
+            <div class="container">
+                <h2>Nosso Catálogo</h2>
+                <p class="subtitulo">Miniaturas e chaveiros artesanais feitos com Hama Beads de 2.6mm e 5mm.</p>
+
+                <div class="produtos-grid">
+                    
+                    <!-- Card 1 -->
+                    <article class="produto-card">
+                        <div class="produto-imagem">
+                            <img src="img/cogumelo-pixel.jpg" alt="Chaveiro Cogumelo Pixel Art">
+                        </div>
+                        <div class="produto-info">
+                            <span class="tag-categoria">Chaveiros</span>
+                            <h3>Chaveiro Cogumelo Pixel</h3>
+                            <p class="descricao">Cogumelo clássico em pixel art. Acabamento fundido com alta resistência.</p>
+                            <p class="dimensoes">Tamanho: 5cm x 5cm</p>
+                            <p class="preco">R$ 15,00</p>
+                            <a href="https://wa.me/5547996214834?text=Olá!%20Quero%20encomendar%20o%20Chaveiro%20Cogumelo%20Pixel" class="btn-produto" target="_blank">Encomendar</a>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="produto-card">
+                        <div class="produto-imagem">
+                            <img src="img/espada-retro.jpg" alt="Miniatura Espada Retrô">
+                        </div>
+                        <div class="produto-info">
+                            <span class="tag-categoria">Miniaturas</span>
+                            <h3>Miniatura Espada Retrô</h3>
+                            <p class="descricao">Miniatura com base de apoio para mesa ou estante de colecionador.</p>
+                            <p class="dimensoes">Tamanho: 12cm x 4cm</p>
+                            <p class="preco">R$ 28,00</p>
+                            <a href="https://wa.me/5547996214834?text=Olá!%20Quero%20encomendar%20a%20Miniatura%20Espada%20Retrô" class="btn-produto" target="_blank">Encomendar</a>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="produto-card">
+                        <div class="produto-imagem">
+                            <img src="img/pokebola-beads.jpg" alt="Chaveiro Pokébola">
+                        </div>
+                        <div class="produto-info">
+                            <span class="tag-categoria">Chaveiros</span>
+                            <h3>Chaveiro Pokébola Classic</h3>
+                            <p class="descricao">Chaveiro redondo reforçado com argola de metal premium.</p>
+                            <p class="dimensoes">Tamanho: 4.5cm x 4.5cm</p>
+                            <p class="preco">R$ 12,00</p>
+                            <a href="https://wa.me/5547996214834?text=Olá!%20Quero%20encomendar%20o%20Chaveiro%20Pokébola" class="btn-produto" target="_blank">Encomendar</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. SEÇÃO ENCOMENDAS -->
+        <section id="encomendas" class="encomendas-secao">
+            <div class="container">
+                <h2>Encomendas Personalizadas</h2>
+                <p class="subtitulo">Preencha os dados e clique em enviar para abrir o WhatsApp com seu pedido pronto!</p>
+
+                <form class="form-encomenda" action="https://wa.me/5547996214834" method="get" target="_blank">
+                    
+                    <div class="form-grupo">
+                        <label for="nome">Seu Nome:</label>
+                        <input type="text" id="nome" name="text" placeholder="Ex: Olá, meu nome é Maria e..." required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="tipo-peca">Tipo de Peça:</label>
+                        <select id="tipo-peca" name="text" required>
+                            <option value="" disabled selected>Selecione uma opção</option>
+                            <option value="Quero encomendar um Chaveiro Hama Beads">Chaveiro</option>
+                            <option value="Quero encomendar uma Miniatura de Mesa Hama Beads">Miniatura / Display de Mesa</option>
+                            <option value="Quero encomendar um Imã de Geladeira Hama Beads">Imã de Geladeira</option>
+                        </select>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="descricao">Descreva sua ideia ou personagem:</label>
+                        <textarea id="descricao" name="text" rows="4" placeholder="Ex: Quero um boneco do Goku pixel art..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-principal">Enviar Pedido no WhatsApp</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- 3. SEÇÃO AVALIAÇÕES -->
+        <section id="avaliacoes" class="avaliacoes-secao">
+            <div class="container">
+                <h2>O que dizem nossos clientes</h2>
+                <p class="subtitulo">A opinião de quem já garantiu suas peças em Hama Beads com a gente.</p>
+
+                <div class="avaliacoes-grid">
+                    
+                    <article class="avaliacao-card">
+                        <div class="estrelas">★★★★★</div>
+                        <p class="depoimento-texto">"Simplesmente perfeito! O chaveiro do meu personagem favorito veio muito bem fundido, resistente e cheio de detalhes."</p>
+                        <span class="cliente-nome">— Lucas Mendes</span>
+                    </article>
+
+                    <article class="avaliacao-card">
+                        <div class="estrelas">★★★★★</div>
+                        <p class="depoimento-texto">"Encomendei uma miniatura personalizada da minha gatinha em pixel art e o resultado superou todas as expectativas."</p>
+                        <span class="cliente-nome">— Beatriz Souza</span>
+                    </article>
+
+                    <article class="avaliacao-card">
+                        <div class="estrelas">★★★★★</div>
+                        <p class="depoimento-texto">"A qualidade dos beads é excelente. Já uso meu chaveiro na mochila todo dia e não soltou nenhuma peça."</p>
+                        <span class="cliente-nome">— Gabriel Lima</span>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SEÇÃO SOBRE -->
+        <section id="sobre" class="sobre-secao">
+            <div class="container">
+                <div class="sobre-grid">
+                    
+                    <div class="sobre-texto">
+                        <h2>Feito à Mão, Pixel por Pixel</h2>
+                        <p class="subtitulo">Transformamos nostalgia e cultura pop em arte palpável.</p>
+                        
+                        <p>O ateliê nasceu da paixão por games clássicos, animes e pelo universo geek. Cada chaveiro ou miniatura é montado artesanalmente utilizando cilindros de Hama Beads, que passam por fusão térmica para garantir durabilidade.</p>
+
+                        <ul class="diferenciais-lista">
+                            <li>✨ Peças exclusivas e colecionáveis</li>
+                            <li>🔥 Fusão térmica resistente e uniforme</li>
+                            <li>🎒 Chaveiros com argolas reforçadas de metal</li>
+                        </ul>
+                    </div>
+
+                    <div class="sobre-imagem">
+                        <img src="img/processo-beads.jpg" alt="Organizando beads coloridos">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. SEÇÃO FAQ -->
+        <section id="faq" class="faq-secao">
+            <div class="container">
+                <h2>Dúvidas Frequentes</h2>
+                <p class="subtitulo">Tudo o que você precisa saber antes de fazer sua encomenda.</p>
+
+                <div class="faq-grid">
+                    <details class="faq-item">
+                        <summary>As peças em Hama Beads são resistentes?</summary>
+                        <p>Sim! Utilizamos um processo térmico de fusão que unifica os beads, garantindo durabilidade para o uso diário.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Qual é o prazo de produção para itens personalizados?</summary>
+                        <p>O prazo médio de confecção é de 3 a 5 dias úteis, dependendo da complexidade do sprite.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Quais são os tamanhos disponíveis dos beads?</summary>
+                        <p>Trabalhamos com beads de 2.6mm (miniaturas detalhadas) e de 5mm (chaveiros marcantes).</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==========================================
+       RODAPÉ (FOOTER)
+       ========================================== -->
+    <footer class="rodape-site">
+        <div class="container rodape-grid">
+            
+            <div class="rodape-coluna">
+                <h3>Pixeland</h3>
+                <p>Sua loja de chaveiros, miniaturas e artes exclusivas em Hama Beads.</p>
+            </div>
+
+            <div class="rodape-coluna">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#catalogo">Catálogo</a></li>
+                    <li><a href="#encomendas">Encomendas</a></li>
+                    <li><a href="#sobre">Sobre o Ateliê</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="rodape-coluna">
+                <h4>Redes Sociais</h4>
+                <div class="redes-links">
+                    <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://wa.me/5547996214834" target="_blank" rel="noopener">WhatsApp</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="rodape-bottom">
+            <p>&copy; 2026 Pixeland. Projeto desenvolvido para a N2 de Ferramentas Web e UX.</p>
+        </div>
+    </footer>
+
+    <!-- Script Simples para Alternar o Dark Mode -->
+    <script>
+        const btnTema = document.getElementById('btn-tema');
+        const body = document.body;
+
+        btnTema.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            if (body.classList.contains('dark-theme')) {
+                btnTema.textContent = '☀️';
+            } else {
+                btnTema.textContent = '🌙';
+            }
+        });
+    </script>
+</body>
+</html>
